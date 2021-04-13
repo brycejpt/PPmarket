@@ -1,0 +1,30 @@
+/* pages/newsdetail/newsdetail.wxss */
+page:before{
+
+  background-image: url(http://39.105.60.142/images/bg.png);
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: -1;
+}
+.news_title{
+  font-size: 40rpx;
+  width: 650rpx;
+  color:rgb(88, 88, 88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.news_image{
+  margin: 10%;
+}
+
+.news_content{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 80rpx;
+  color: black;
+  
+}

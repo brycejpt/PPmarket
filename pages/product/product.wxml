@@ -1,0 +1,65 @@
+<!--pages/product/product.wxml-->
+<view>
+  <image class="pd_image" src="http://39.105.60.142/images/{{shoes_info.shoes_image}}"></image>
+  <view class="pd_name">{{shoes_info.shoes_name}}</view>
+  <view class="pd_price">{{shoes_info.shoes_price}}</view>
+  <!-- <view class="size">
+    <view class="chose_size">选择尺码：</view>
+  <view class='select_box'>
+  <view class='select' catchtap='selectTap'>
+    <text class='select_text'>{{selectData[index]}}</text>
+    <image class='select_img {{show&&"select_img_rotate"}}' src='/images/icon1.png'></image>   
+  </view>
+  <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+    <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+  </view>
+  </view>
+  </view> -->
+  <view class="SN">
+    <view class="sizeandnums">
+    <picker bindchange="bindSPickerChange" value="{{indexS}}" range="{{size}}">
+      <view class="size">
+        <view class="input_left">选择尺码：</view>
+        <view class='input_textarea'>{{size[indexS]}}</view>
+      </view>
+    </picker>
+    <view class="size">
+      <view>
+        选择数量：
+      </view>
+      <view class="stepper">  
+      <!-- 减号 -->  
+      <text class="{{minusStatus}}" bindtap="bindMinus">-</text>  
+      <!-- 数值 -->  
+      <input type="number" bindchange="bindManual" value="{{num}}" />  
+      <!-- 加号 -->  
+      <text class="normal" bindtap="bindPlus">+</text>  
+      </view>  
+    </view>
+    </view>
+    <view class='submit'>
+      <!-- bindtap="submitSuccess" -->
+      
+      <view wx:if="{{like_status==1}}">
+        <button class= "submit-btn2" bindtap="likeit"></button>
+      </view>
+      <view wx:else>
+        <button class= "submit-btn1" bindtap="likeit"></button>
+      </view>
+    </view>
+  </view>
+  
+
+  
+  
+  <!-- <image class="pd0" src="http://39.105.60.142/images/image00.jpeg"></image>
+  <image class="pd0" src="http://39.105.60.142/images/image01.jpeg"></image>
+  <image class="pd0" src="http://39.105.60.142/images/image02.jpeg"></image>
+  <image class="pd0" src="http://39.105.60.142/images/image03.jpeg"></image>
+  <image class="pd0" src="http://39.105.60.142/images/image04.jpeg"></image>
+  <image class="pd0" src="http://39.105.60.142/images/image05.jpeg"></image>
+  <image class="pd0" src="http://39.105.60.142/images/image06.jpeg"></image>
+  <image class="pd0" src="http://39.105.60.142/images/image07.jpeg"></image>
+  <image class="pd0" src="http://39.105.60.142/images/image08.jpeg"></image>
+  <image class="pd0" src="http://39.105.60.142/images/image09.jpeg"></image> -->
+</view>

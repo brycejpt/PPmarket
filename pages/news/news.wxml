@@ -1,0 +1,12 @@
+<!--pages/news/news.wxml-->
+<block wx:for="{{news}}" wx:key="news">
+  <view class="newstitle" bindtap="toNewsdetail"  data-item="{{item}}"> 
+    
+    <image class="title_image" src="{{item.image}}"></image>
+   
+    <view class="title_text">
+      {{item.title}}
+    </view>
+    
+  </view>
+</block>

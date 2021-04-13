@@ -1,0 +1,204 @@
+/* pages/home/home.wxss */
+/* page{
+  z-index: 1;
+} */
+page:before {
+  content: ' ';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(http://39.105.60.142/images/mamba.png) center 0 no-repeat;
+  background-size: cover;
+}
+
+.lunbotu{
+  height: 500rpx;
+  width:700rpx;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6%;
+  margin-top:10%;
+  overflow: hidden;
+}
+
+.swiper_img{
+  height: 550rpx;
+  width:750rpx;
+}
+
+.icon_area{
+  width: 750rpx;
+  height: 400rpx;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box_item{
+  width: 187rpx;
+  height: 150rpx;
+  float: left;
+  /* border: solid */
+  
+}
+
+.box_img{
+  /* border: 4rpx solid rgb(252, 248, 248); */
+  border-radius: 50%;
+  width: 150rpx;
+  height: 150rpx;
+  box-shadow: white 1px 1px 35px 2px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.box_image_nike{
+  margin-left:15%;
+  margin-right: 10%;
+  margin-top: 26%;
+  width: 120rpx;
+  height: 70rpx;
+}
+
+.box_image_lining{
+  margin-left:14%;
+  margin-right: 10%;
+  margin-top: 15%;
+  width: 110rpx;
+  height: 100rpx;
+}
+
+.box_image_ad{
+  margin-left:15%;
+  margin-right: 10%;
+  margin-top: 13%;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.box_image_aj{
+  margin-left:16%;
+  margin-right: 10%;
+  margin-top: 10%;
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.box_txt{
+  /* background-color: rgb(24, 211, 117); */
+  color: rgb(253, 252, 253);
+  text-align: center;
+  width: 187rpx;
+  height: 50rpx;
+  /* margin-left: 10%;
+  margin-right: auto; */
+  /* border:solid */
+}
+
+.shoesimage{
+  height: 250px;
+  width: 290px;
+  /* float: left; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box_pd{
+  width: 368rpx;
+  height: 500rpx;
+  float: left;
+  /* border: 4rpx solid rgb(252, 248, 248); */
+  border-radius: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+
+.product_img{
+  height: 460rpx;
+  width: 300rpx;
+  margin: 30rpx;
+  overflow: hidden;
+  /* border: 4rpx solid rgb(252, 248, 248); */
+  border-radius: 10%;
+  float: left;
+  box-shadow: white 10px 10px 30px 5px
+}
+
+.product_image{
+  width: 300rpx;
+  height: 300rpx;
+  
+  /* border: 4rpx solid rgb(252, 248, 248); */
+}
+
+.pd_info{
+  width: 300rpx;
+  height: 80rpx;
+  float: left;
+  position: relative;
+  font-size: 28rpx;
+  color: aliceblue;
+  margin-top: 0rpx;
+  margin-bottom: 0rpx;
+  /* border: 4rpx solid rgb(252, 248, 248); */
+  overflow: hidden;
+  text-align: center;
+}
+
+.product_price{
+  width: 300rpx;
+  height: 20rpx;
+  margin-top: 0rpx;
+  margin-bottom: 5rpx;
+  
+  text-align: center;
+  color:  rgb(252, 248, 248);
+  float: left;
+  position: relative;
+  /* border: 4rpx solid rgb(252, 248, 248); */
+}
+
+
+
+.shoestext{
+  color: coral;
+  font-size: 20px;
+  
+}
+
+/* view{
+  width: 200px;
+  height: 150px;
+} */
+.box1{
+  background-color: cornflowerblue;
+  border: solid;
+}
+.box2{
+  background-color: crimson;
+  padding:20rpx;
+  border: 4rpx solid #000;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+.box3{
+  background-color: crimson;
+  margin-top:10px;
+  margin-bottom:20px;
+  border-radius: 5%;
+}
+.box4{
+  background-color: crimson;
+  overflow: scroll;
+  min-height: 2rem;
+}
+
