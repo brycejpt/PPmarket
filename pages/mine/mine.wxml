@@ -1,0 +1,32 @@
+<!--pages/mine/mine.wxml-->
+
+<!-- <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+<text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+<!-- <button open-type="getUserInfo">
+      <block >
+      <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>       
+      </block>
+</button> -->
+
+<view class="userinfo">
+      <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
+            <view class="userinfo-avatar" >
+            <open-data type="userAvatarUrl"></open-data>
+            </view>
+            <view>
+                  <open-data type="userNickName"></open-data>，你好！欢迎参观我的球鞋^ ^
+            </view>
+            
+            <!-- <open-data type="userGender"></open-data>
+            <open-data type="userCountry"></open-data> -->
+      </block>
+</view>
+
+<!-- <view>{{nickName}}</view>
+<view>{{uid}}</view> -->
+
+<button  class="mylike" bindtap="writearticle">上传文章</button>
+<button  class="mylike" bindtap="tomylike">我的喜欢</button>
+<button open-type='contact' session-from=''>和我聊天</button>
+

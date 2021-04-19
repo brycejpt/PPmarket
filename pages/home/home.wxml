@@ -1,0 +1,201 @@
+<!--pages/home/home.wxml-->
+<!-- <text class="shoestext">pages/home/home.wxml</text> -->
+
+<view class="lunbotu">
+  <swiper
+    indicator-dots="true"
+    autoplay="true"
+    style='height:500rpx'>
+    <swiper-item>
+      <image class="swiper_img" src="http://39.105.60.142/images/image1.jpeg" />
+    </swiper-item>
+    <swiper-item>
+      <image class="swiper_img" src="http://39.105.60.142/images/image2.jpeg" />
+    </swiper-item>
+    <swiper-item>
+      <image class="swiper_img" src="http://39.105.60.142/images/image3.jpeg" />
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="icon_area">
+  <view class="box_item">
+    <view class="box_img">
+      <image class="box_image_nike" src="http://39.105.60.142/images/nike.png"></image>
+    </view>
+    <view class="box_txt"> 
+      Nike
+    </view>
+  </view>
+  <view class="box_item">
+    <view class="box_img">
+      <image class="box_image_aj" src="http://39.105.60.142/images/aj.png"></image>
+    </view>
+    <view class="box_txt"> 
+      Air Jordan
+    </view>
+  </view>
+  <view class="box_item">
+    <view class="box_img">
+      <image class="box_image_ad" src="http://39.105.60.142/images/adidas.png"></image>
+    </view>
+    <view class="box_txt"> 
+      Adidas
+    </view>
+  </view>
+  
+  <view class="box_item">
+    <view class="box_img">
+      <image class="box_image_lining" src="http://39.105.60.142/images/vans.png" ></image>
+    </view>
+    <view class="box_txt"> 
+      Vans
+    </view>
+  </view>
+  
+</view>
+
+<view class="products_area"> 
+  <block wx:for="{{shoesinfo}}" wx:key="shoesinfo">
+    <view class="box_pd"  bindtap="intoPage"  data-item="{{item}}" >
+      <view class="product_img">
+        <image class="product_image" src="http://39.105.60.142/images/{{item.shoes_image}}"></image>
+        <view class="pd_info">
+          {{item.shoes_name}}
+        </view>
+        <view class="product_price">
+          {{item.shoes_price}}
+        </view>
+      </view>
+    </view>
+  </block>
+
+</view>
+  
+  <!-- <view class="box_product">
+    <view class="box_pd" bindtap="intoPage">
+      <view class="product_img">
+        <image class="product_image" src="http://39.105.60.142/images/image01.jpeg"></image>
+        <view class="pd_info">
+          Nike Air Foamposite One "Beijing"
+        </view>
+        <view class="product_price">
+        2999¥
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="box_product">
+    <view class="box_pd"  bindtap="intoPage">
+      <view class="product_img">
+        <image class="product_image" src="http://39.105.60.142/images/image09.jpeg"></image>
+        <view class="pd_info">
+          Sacai x Nike VaporWaffle "Tour Yellow"
+        </view>
+        <view class="product_price">
+        3899¥
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="box_product">
+    <view class="box_pd"  bindtap="intoPage">
+      <view class="product_img">
+        <image class="product_image" src="http://39.105.60.142/images/image02.jpeg"></image>
+        <view class="pd_info">
+          Adidas Yeezy boost 350 v2 "Ash Stone"
+        </view>
+        <view class="product_price">
+        2099¥
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="box_product">
+    <view class="box_pd"  bindtap="intoPage">
+      <view class="product_img">
+        <image class="product_image" src="http://39.105.60.142/images/image03.jpeg"></image>
+        <view class="pd_info">
+          Air Jordan 1 Retro High OG "Volt Gold"
+        </view>
+        <view class="product_price">
+        1599¥
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="box_product">
+    <view class="box_pd"  bindtap="intoPage">
+      <view class="product_img">
+        <image class="product_image" src="http://39.105.60.142/images/image04.jpeg"></image>
+        <view class="pd_info">
+          Air Jordan 1 Retro High OG "Dark Mocha"
+        </view>
+        <view class="product_price">
+        2999¥
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="box_product">
+    <view class="box_pd"  bindtap="intoPage">
+      <view class="product_img">
+        <image class="product_image" src="http://39.105.60.142/images/image05.jpeg"></image>
+        <view class="pd_info">
+          Nike Dunk Low Retro "Black"
+        </view>
+        <view class="product_price">
+        2099¥
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="box_product">
+    <view class="box_pd"  bindtap="intoPage">
+      <view class="product_img">
+        <image class="product_image" src="http://39.105.60.142/images/image06.jpeg"></image>
+        <view class="pd_info">
+          Nike Dunk Low Retro "Medium Grey"
+        </view>
+        <view class="product_price">
+        1899¥
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="box_product">
+    <view class="box_pd"  bindtap="intoPage">
+      <view class="product_img">
+        <image class="product_image" src="http://39.105.60.142/images/image07.jpeg"></image>
+        <view class="pd_info">
+          Air Jordan 1 Zoom Air CMFT "Easter"
+        </view>
+        <view class="product_price">
+        1999¥
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="box_product">
+    <view class="box_pd"  bindtap="intoPage">
+      <view class="product_img">
+        <image class="product_image" src="http://39.105.60.142/images/image08.jpeg"></image>
+        <view class="pd_info">
+          Adidas Yeezy boost 700 v2 "cream"
+        </view>
+        <view class="product_price">
+        3199¥
+        </view>
+      </view>
+    </view>
+  </view> -->
+  
+<!-- </view> -->
+
+
+
+<!-- <image class="shoesimage" src="/images/image1.png" ></image>
+
+<image class="shoesimage" src="/images/image2.png"></image> -->
+
+

@@ -1,0 +1,34 @@
+/* pages/uparticle/uparticle.wxss */
+
+.upimage{
+  height: 400rpx;
+  width: 600rpx;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid;
+  
+}
+
+.title{
+  width: 700rpx;
+  height: 100rpx;
+  border:solid;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.imgtxt{
+  margin:auto;
+  margin-bottom: 20rpx;
+}
+
+.article{
+  width: 700rpx;
+  height: 600rpx;
+  border:solid;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
