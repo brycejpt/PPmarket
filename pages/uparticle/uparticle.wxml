@@ -1,0 +1,14 @@
+<!--pages/uparticle/uparticle.wxml-->
+
+<form class="pageform" bindsubmit="formSubmit">
+  <input type="text" class="title" name="title" placeholder="请输入标题"/>
+  <view class="upimage" name="articleimage" >
+    <image style="width:100%;height:100%;" src="{{tempFilePaths}}" ></image>
+  </view>
+
+  <button class="imgtxt" bindtap="chooseimg" >点击选择图片</button>
+  <textarea class="article" name="article" cols="30" rows="10" placeholder="请输入正文"></textarea>
+  <view class="btn-area">
+      <button form-type="submit">Submit提交</button>
+    </view>
+</form>

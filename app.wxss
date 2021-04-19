@@ -1,0 +1,19 @@
+/**app.wxss**/
+/* page:before {
+  background-color: rgb(126, 115, 115);
+} */
+page{
+  margin-top: 10%;
+  background-color: rgb(202, 199, 199);
+}
+/* http://39.105.60.142/images/bg.jpeg */
+/* page{
+  background-image: url(https://static.nike.com/a/images/w_960,c_limit,f_auto/c6f1337d-366f-4037-a168-520c64b0c64a/mamba-forever.jpg);
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-attachment: fixed;
+  background-size:cover;
+  
+  z-index:-1;
+  display:block
+} */

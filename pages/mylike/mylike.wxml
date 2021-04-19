@@ -1,0 +1,16 @@
+<!--pages/mylike/mylike.wxml-->
+<view class="products_area"> 
+  <block wx:for="{{shoesinfo}}" wx:key="shoesinfo">
+    <view class="box_pd"  bindtap="intoPage"  data-item="{{item}}" >
+      <view class="product_img">
+        <image class="product_image" src="http://39.105.60.142/images/{{item.shoes_image}}"></image>
+        <view class="pd_info">
+          {{item.shoes_name}}
+        </view>
+        <view class="product_price">
+          {{item.shoes_price}}
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
