@@ -30,39 +30,58 @@ Page({
       uid:wx.getStorageSync('uid')
     })
     console.log(this.data.shoes_info.shoes_id)
-    let that = this
-    
-    wx.request({
-      url: 'https://www.pkujpt.cn/getlikestatus',
-      data:{
-        user_id:this.data.uid,
-        shoes_id:this.data.shoes_info.shoes_id
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
+    this.getlikestatus().then(this.setindexS,this.indexSerr);
+  },
+
+  getlikestatus:function(){
+    let promise = new Promise((resolve,reject)=>{
+      let that = this
+      wx.request({
+        url: 'https://www.pkujpt.cn/getlikestatus',
+        data:{
+          user_id:this.data.uid,
+          shoes_id:this.data.shoes_info.shoes_id
         },
-        success (res) {
-        console.log("ls是："+res.data[0].like_status)
-        that.setData({
-          like_status:res.data[0].like_status,
-          like_size : res.data[0].like_size
-        })
-        console.log(that.data.like_status)
-        // console.log("000"+res.data[0].like_size)
-        let sizes = that.data.size
-        let index = 0
-        let size = that.data.like_size
-        while(sizes[index]!=size){
-          index++
-        }
-        // console.log(index)
-        that.setData({
-          indexS:index
-        })
-        // console.log("1234是"+that.data.indexS)
-        },  
+        header: {
+          'content-type': 'application/json' // 默认值
+          },
+          success (res) {
+          if(res.data[0].like_status!=null){
+            console.log("ls是："+res.data[0].like_status)
+            that.setData({
+              like_status:res.data[0].like_status,
+              like_size : res.data[0].like_size
+            })
+            resolve();
+          } else{
+            reject();
+          }
+          console.log(that.data.like_status)
+          // console.log("000"+res.data[0].like_size)          
+          // console.log("1234是"+that.data.indexS)
+          },  
+      })
     })
-    
+    return promise
+  },
+
+  setindexS:function(){
+    let sizes = this.data.size
+    let index = 0
+    let size = this.data.like_size
+    while(sizes[index]!=size){
+      index++
+    }
+          // console.log(index)
+    this.setData({
+      indexS:index
+    })
+  },
+
+  indexSerr:function(){
+    wx.showToast({
+      title: '请求超时',
+    })
   },
 
   /**
