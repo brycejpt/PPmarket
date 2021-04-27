@@ -2,7 +2,7 @@
 <view class="news_title">{{newsdetail.title}}</view>
 <view><image class="news_image" src="{{newsdetail.image}}"></image></view>
 <view class="news_content" >
-  <text decode="{{true}}">
+  <text selectable="true" decode="{{true}}">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{newsdetail.content}}
   </text>
 </view>
